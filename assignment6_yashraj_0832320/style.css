@@ -1,0 +1,93 @@
+
+body {
+  background-color: rgba(213, 130, 155, 0.85);
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3em;
+  font-family: 'Work Sans', sans-serif;
+  color: white;
+  text-align: center;
+  margin: 5px 0px;
+}
+
+label {
+  font-size: 24px;
+  font-family: 'Work Sans', sans-serif;
+  color: white;
+}
+
+input[type="submit"] {
+  width: 10%;
+  height: 3.5em;
+  align-self: center;
+  border-radius: 100px;
+  border: 0;
+  background-color: gray;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'Work Sans', sans-serif;
+  cursor: pointer;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+}
+
+
+@media screen and (max-width: 600px)
+{ 
+  body{
+    background-color: blue;
+  }
+
+  input[type="submit"]{
+      width: 30%;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    width: 70%;
+  }
+
+}
+
+@media screen and (min-width: 601px) and (max-width: 1200px)
+{  
+  body {
+      background-color: red;
+  }
+ 
+  label {
+      font-size: 27px;
+  }
+
+  input[type="submit"]{
+      margin-top: 10px;
+  }
+
+  input[type="text"],input[type="email"], input[type="tel"] , textarea{
+    width: 60%;
+    margin: 5px auto;
+  }  
+}
+
+@media screen and (min-width: 1201px)
+{  
+  body {
+      background-color: green;
+  }
+  
+  label {
+      font-size: 29px;
+  }
+
+  input[type="text"],input[type="email"], input[type="tel"] , textarea{
+    width: 80%;
+    margin: 5px auto;
+  }
+}
