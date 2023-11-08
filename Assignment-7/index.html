@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Validation Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Include Swiper CSS and JavaScript -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
+    <script src="form.js"></script>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <h1>Yashraj Bhatti</h1>
+
+    <!-- Swiper container for form sections -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <!-- School Information -->
+            <div class="swiper-slide">
+                <form id="schoolForm" action="#" method="post">
+                    <div>
+                        <label for="nameofSch">Name Of School:</label>
+                        <input type="text" id="nameofSch" name="nameofSch" required>
+                    </div>
+                    <div>
+                        <label for="date">Date:</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    <div>
+                        Graduated:
+                      <label for="yes">Yes</label>
+                      <input type="radio" id="yes" name="Graduated" required>
+                      <label for="no">No</label>
+                      <input type="radio" id="no" name="Graduated" required>
+                    </div>
+                    <div>
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Personal Information -->
+            <div class="swiper-slide">
+                <form id="personalForm" action="#" method="post">
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required oninvalid="alert('You must fill it')" oninput="pattern.alert('Please enter valid format (eg. xyz@.xyz).')" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+                    </div>
+                    <div>
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" name="phone" oninvalid="alert('You must fill it')" required oninput="pattern.alert('Please enter valid format (eg. 0000000000).')" pattern="[0-9]{10}">
+                    </div>
+                    <div>
+                        <label for="zip">Zip Code:</label>
+                        <input type="text" id="zip" name="zip" required pattern="[A-Za-z]\d[A-Za-z]\d[A-Za-z]\d" oninvalid="alert('You must fill it')" oninput="pattern.alert('Please enter valid format A1A1A1.')">
+                    </div>
+                    <div>
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Payment Information -->
+            <div class="swiper-slide">
+                <form id="paymentForm" action="#" method="post">
+                    <div>
+                        <label for="ccnumber">Credit Card Number:</label>
+                        <input type="text" id="ccnumber" name="ccnumber" required pattern="[0-9]{10}">
+                    </div>
+                    <div>
+                        <label for="expDate">Expiration Date:</label>
+                        <input type="date" id="expDate" name="expDate" required>
+                    </div>
+                    <div>
+                        <label for="cvv">CVV:</label>
+                        <input type="password" id="cvv" name="cvv" required pattern="[0-9]{3}">
+                    </div>
+                    <div>
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Swiper pagination and navigation -->
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</body>
+</html>
