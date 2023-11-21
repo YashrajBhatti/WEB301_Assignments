@@ -1,0 +1,38 @@
+html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1rem;
+    background-color: rgb(0, 255, 251);
+    padding-top: 62px;
+  }
+  
+  @media (min-width: 601px) {
+    body {
+      font-size: 1.125rem;
+      background-color: rgb(225, 228, 37);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    body {
+      font-size: 1.25rem;
+      background-color: greenyellow;
+    }
+  }
+  
+  .footer {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 100px;
+    text-align: center;
+    font-size: 1rem;
+  }
+  
+  .card-img-top {
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+  }
