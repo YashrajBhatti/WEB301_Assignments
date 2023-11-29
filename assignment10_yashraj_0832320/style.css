@@ -1,0 +1,17 @@
+/* 
+    Author: Yashraj Bhatti
+    Id: 0832320
+    Assignment 10
+*/
+
+@media (max-width: 576px) {
+    .image-order {
+        order: 3;
+    }
+    .header-order {
+        order: 1;
+    }
+    .table-order {
+        order: 2;
+    }
+}
